@@ -8,7 +8,7 @@
 		"dev": "gulp watch",
 		"lint:js": "eslint bookmarklet/original.js docs/script.js docs/index.html gulpfile.js",
 		"lint:css": "stylelint sass/**/*.css src/style.css",
-		"lint": "yarn lint:js --fix && yarn lint:css --fix",
+		"lint": "yarn lint:js --fix && yarn lint:css --fix"
 	},
 	"repository": {
 		"type": "git",

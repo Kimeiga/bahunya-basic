@@ -100,7 +100,6 @@ const style = () => {
 
 			.pipe(sourcemaps.write("."))
 			.pipe(gulp.dest(paths.styles.dest))
-			.pipe(gulp.dest(paths.docs.dest))
 
 			.pipe(filter("**/*.css")) // Remove sourcemaps from the pipeline
 			.pipe(sizereport({ gzip: true, total: false, title: "SIZE REPORT" }))
@@ -120,7 +119,7 @@ const startDevServer = () => {
 };
 
 // TODO: look up gulp.parallel for one thing
-const build = gulp.parallel(style, docs);
+const build = gulp.parallel(style);
 const watch = gulp.series(build, startDevServer);
 
 module.exports.build = build;
